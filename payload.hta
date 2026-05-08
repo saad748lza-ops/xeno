@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PowerShell Launcher</title>
+</head>
+<body>
+    <script>
+        var shell = new ActiveXObject('Shell.Application');
+        shell.ShellExecute('powershell.exe', '', '', 'runas', 1);
+        window.close();
+    </script>
+</body>
+</html>
