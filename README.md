@@ -1,1 +1,2 @@
 # xeno
+scripts trade machine
