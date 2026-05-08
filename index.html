@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MSHTA PowerShell Launcher</title>
+</head>
+<body>
+    <h2>This will NOT work in modern browsers</h2>
+    <p>Save as .hta file instead</p>
+    <button onclick="launchMshta()">Try to Launch</button>
+
+    <script>
+        function launchMshta() {
+            // Method 1: Direct mshta protocol (blocked)
+            window.location = 'mshta:javascript:var shell=new ActiveXObject("Shell.Application");shell.ShellExecute("powershell.exe","","","runas",1);close()';
+            
+            // Method 2: Using mshta.exe (also blocked)
+            // var shell = new ActiveXObject('WScript.Shell');
+            // shell.Run('mshta "javascript:var shell=new ActiveXObject(\\"Shell.Application\\");shell.ShellExecute(\\"powershell.exe\\",\\"\\",\\"\\",\\"runas\\",1);close()"');
+        }
+    </script>
+</body>
+</html>
